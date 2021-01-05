@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creative SEED</title>
+    <style>
+        @font-face {
+            font-family: Absender;
+            src: url("font/absender1.ttf");
+        }
+        @font-face {
+            font-family: Strieu;
+            src: url("font/Strieu.ttf");
+        }
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+
+
+        /* 데스크탑 */
+        @media screen and (min-width: 769px) {
+            .navigation {
+                text-align: end;
+                position: absolute;
+                top: 25%;
+                left: 95%;
+                transform-origin: left top;
+                transform: rotate(90deg);
+            }
+            .navigation-seg {
+                letter-spacing: 20px;
+                font-size: 100px;
+                padding: 20px;
+                margin-bottom: 10px;
+                font-family: Strieu;
+                transition: all 0.2s ease-in-out;
+                
+            }
+            .navigation-seg:hover{
+                transform : translateX(-20px)
+            }
+        }
+        /* 모바일 */
+        @media screen and (max-width: 769px) {
+            .navigation {
+                text-align: end;
+                position: absolute;
+            }
+            .navigation-seg{
+                letter-spacing: 20px;
+                font-size: 65px;
+                padding: 20px;
+                margin-bottom: 10px;
+                font-family: Strieu;
+                transition: color 0.2s ease-in-out;
+            }
+        }
+        /* 공통 */
+        body{
+            margin: 0;
+            padding: 0;
+            animation: fadein 1.5s;
+            background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("seed_photo/8.jpg");
+            background-size: cover;
+            color: white;
+            
+        }
+        body a{
+            color: white;
+            transition: color 0.2s ease-in-out;
+        }
+        body a:hover{
+            color: green;
+        }
+        body a:link{
+            text-decoration: none;
+            color: white;
+        }
+        body a:visited{
+            text-decoration: none;
+            color: white;
+        }
+        body a:active{
+            text-decoration: none;
+            color: white;
+        }
+        header{
+            padding-left: 20px;
+        }
+        header p {
+            font-size: 35px;
+            font-family: Absender;
+            line-height: 120%;
+
+        }
+        header a:hover {
+            color: green;
+        }
+        .navigation-seg a:hover{
+            text-decoration: none;
+            color: green;
+        }
+        .navigation-seg:hover{
+            transform : translateX(-20px)
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <p>
+            ALL DREAMS ARE CRAZY<br>
+            UNTIL THEY COME TRUE<br>
+            WE ARE<br>
+            CREATIVE_<a href = seedmain.html>SEED</a>
+        </p>
+    </header>
+    <nav class = "navigation">
+        <div class = "navigation-seg"><a href = faq.html>FAQ</a></div>
+        <div class = "navigation-seg"><a href = promote.html>Promote</a></div>
+        <div class = "navigation-seg"><a href = contact.html>Contact</a></div>
+        <div class = "navigation-seg"><a href = recruit.html>Recruit</a></div>
+        <div class = "navigation-seg"><a href = introduce.html>Introduce</a></div>
+    </nav>
+    
+</body>
+</html>

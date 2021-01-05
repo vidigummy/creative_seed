@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creative SEED</title>
+    <style>
+        @font-face {
+            font-family: Absender;
+            src: url("font/absender1.ttf");
+        }
+        @font-face {
+            font-family: Quantify;
+            src: url("font/Quantify.ttf");
+        }
+        @font-face {
+            font-family: BinggraeMelona;
+            src: url("font/BinggraeMelona.ttf");
+        }
+        @font-face {
+            font-family: BinggraeMelona-Bold;
+            src: url("font/BinggraeMelona-Bold.ttf");
+        }
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+                
+            }
+        }
+    
+
+
+        /* 데스크탑 */
+        @media screen and (min-width: 769px) {
+            .navigation {
+                margin: 0;
+                height: 900px;
+                line-height: 1000px;
+                text-align: center;
+                
+            }
+            .navigation-seg {
+                background-color: rgb(2, 87, 2);
+                background-size: cover;
+                height: 230px;
+                line-height: 230px;
+                width: 230px;
+                text-align: center;
+                font-size: 40px;
+                display: inline-block;
+                border: black solid 1px;
+                border-radius: 50%;
+                padding: 10px;
+                margin: 20px;
+                font-family: BinggraeMelona-Bold;
+                transition: transform 0.2s ease-in-out;
+                
+            }
+            .navigation-seg:hover {
+                transform: scale(1.1);
+            }
+            .navigation-seg a{
+                text-decoration: none;
+                z-index: 2;
+            }
+            
+        }
+        /* 모바일 */
+        @media screen and (max-width: 769px) {
+            .navigation {
+                text-align: end;
+                position: absolute;
+            }
+            .navigation-seg{
+                letter-spacing: 20px;
+                font-size: 60px;
+                padding: 20px;
+                margin-bottom: 10px;
+                font-family: Quantify;
+                transition: color 0.2s ease-in-out;
+            }
+            .navigation-seg a:hover{
+                color : green;
+            }
+        }
+        /* 공통 */
+        body{
+            margin: 0;
+            padding-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-image: url('/seed_photo/dongbang1.jpg');
+            animation: fadein 1.5s;
+        }
+        .top-fixed{
+            color: white;
+            font-family: Absender;
+            position: fixed;
+            height: 45px;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            opacity: 0.7;
+            background-color : rgb(22, 20, 20);
+            z-index: 2;
+        }
+        .top-fixed p{
+            display: inline-block;
+            font-size: 35px;
+            margin-top: 11px;
+
+        }
+        .top-fixed a:link{
+            color: white;
+        }
+        .top-fixed a:visited{
+            color: white;
+        }
+        .top-fixed a:hover{
+            color: green;
+        }
+        a:link{
+           text-decoration: none;
+           color: white;
+        }
+        a:visited{
+           text-decoration: none;
+           color: white;
+        }
+        a:active{
+           text-decoration: none;
+           color: white;
+        }
+        a:hover{
+           text-decoration: none;
+           color: rgb(255, 202, 57);
+        }
+        .introduce{
+            text-align: center;
+        }
+        .introduce-content{
+            font-family: BinggraeMelona;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .welcome{
+            font-family: BinggraeMelona-Bold;
+            font-size: 45px;
+            color: green;
+
+        }
+        .dropdown-content{
+            display: none;
+            text-align: end;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            font-size: 60px;
+            line-height: 70px;
+            top: 77px;
+            right: 0;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            display: block;
+            
+            text-decoration: none;
+        }
+
+        .dropbtn {
+            display: inline;
+            position: fixed;
+            font-size:45px;
+            top: -8px;
+            right: 0;
+            padding: 17px;
+
+            transition: all 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(49, 45, 45);
+        }
+
+        .dropnav:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropnav:hover .dropbtn {
+            transform: rotate(90deg);
+        }
+        /* 슬라이드 이미지 부분 */
+        .slide-section input[id*="slide"] {
+            display: none;
+        }
+
+        .slide-section .slidewrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide-section .slidelist {
+            white-space: nowrap;
+            padding-left: 0;
+            font-size: 0;
+        }
+        .slide-section .slidelist>li {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            transition: all .5s
+        }
+        .slide-section .slidelist>li a {
+            display: block;
+            position: relative;
+        }
+        .slide-section .slidelist>li a img {
+            width: 20%;
+        }
+
+        .slide-section .slide-control {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:10;
+            width:100%;
+            height:100%;
+        }
+        .slide-section .slide-control label {
+            position: absolute;
+            z-index: 1;
+            top: 43%;
+            transform: translateY(-50%);
+            padding: 50px;
+            cursor: pointer;
+        }
+        .slide-section .slide-control .left {
+            left: 120px;
+            background: url("seed_photo/left.png") center center / 70% no-repeat;
+        }
+        .slide-section .slide-control .right {
+            right: 120px;
+            background: url("seed_photo/right.png") center center / 70% no-repeat;
+        }
+        .slide-section .slide-control [class*="control"] {
+            display : none;
+        }
+
+        .slide-section [id*="slide01"]:checked ~ .slidewrap .slidelist > li {transform: translateX(0%);}
+        .slide-section [id*="slide02"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-100%);}
+        .slide-section [id*="slide03"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-200%);}
+        .slide-section [id*="slide04"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-300%);}
+        .slide-section [id*="slide05"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-400%);}
+        .slide-section [id*="slide06"]:checked ~ .slidewrap .slidelist > li {transform: translateX(-500%);}
+
+        .slide-section [id="slide01"]:checked ~ .slidewrap .control01 {display : block;}
+        .slide-section [id="slide02"]:checked ~ .slidewrap .control02 {display : block;}
+        .slide-section [id="slide03"]:checked ~ .slidewrap .control03 {display : block;}
+        .slide-section [id="slide04"]:checked ~ .slidewrap .control04 {display : block;}
+        .slide-section [id="slide05"]:checked ~ .slidewrap .control05 {display : block;}
+        .slide-section [id="slide06"]:checked ~ .slidewrap .control06 {display : block;}
+        
+    </style>
+</head>
+<body>
+    <header class = "top-fixed">
+        <p>
+            INTRODUCE
+            <a href = seedmain.html>SEED</a>
+        </p>
+        <div class="dropnav">
+            <div class="dropbtn">&#9776;</div> 
+            <div class = "dropdown-content">
+                <a href = introduce.html>Introduce</a>
+                <a href = apply.html>Recruit</a>
+                <a href = ask.html>Contact</a>
+                <a href = promotion.html>Promote</a>
+                <a href = faq.html>FAQ</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <article class="introduce">
+            <header>
+                <h3 class = "welcome">🌱 SEED 홈페이지 방문을 환영합니다 🌱</h3>
+            </header>
+            <div class = "slide-section">
+                <input type = "radio" name = "slide" id = "slide01" checked>
+                <input type = "radio" name = "slide" id = "slide02">
+                <input type = "radio" name = "slide" id = "slide03">
+                <input type = "radio" name = "slide" id = "slide04">
+                <input type = "radio" name = "slide" id = "slide05">
+                <input type = "radio" name = "slide" id = "slide06">
+                <div class = "slidewrap">
+                    <ul class = "slidelist">
+                        <li>
+                            <a>
+                                <img src = "seed_photo/seed1.jpeg" >
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src = "seed_photo/seed2.jpeg" >
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src = "seed_photo/seed3.jpeg" >
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src = "seed_photo/seed4.jpeg" >
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src = "seed_photo/seed5.jpeg" >
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <img src = "seed_photo/seed6.jpeg" >
+                            </a>
+                        </li>
+                    </ul>
+                    <div class = "slide-control">
+                        <div class = "control01">
+                            <label for = "slide06" class = "left"></label>
+                            <label for = "slide02" class = "right"></label>
+                        </div>
+                        <div class = "control02">
+                            <label for = "slide01" class = "left"></label>
+                            <label for = "slide03" class = "right"></label>
+                        </div>
+                        <div class = "control03">
+                            <label for = "slide02" class = "left"></label>
+                            <label for = "slide04" class = "right"></label>
+                        </div>
+                        <div class = "control04">
+                            <label for = "slide03" class = "left"></label>
+                            <label for = "slide05" class = "right"></label>
+                        </div>
+                        <div class = "control05">
+                            <label for = "slide04" class = "left"></label>
+                            <label for = "slide06" class = "right"></label>
+                        </div>
+                        <div class = "control06">
+                            <label for = "slide05" class = "left"></label>
+                            <label for = "slide01" class = "right"></label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <p class = "introduce-content">
+                기술 창업 동아리 SEED는 2015년 한국항공대학교 <br>
+                안희석 선배님을 중심으로 한 저가형 스마트팜 프로젝트 ‘단비’에서 시작하였습니다. <br>
+                창설 이후 SEED는 지자체 및 한국항공대의 인정을 받아 항공우주박물관 311호에 자리를 잡게 되었습니다. <br>
+                그 이후 수많은 창업 공모전에 참여하며 꾸준히 성과를 올리는 한 편, <br>
+                항공대 예비 창업자들이 역량을 키울 수 있게 해 줄 창업 세미나와 설명회 등을 꾸준히 개최하며<br>
+                항공대 내에서의 창업 인프라 조성 역할 또한 꾸준히 해 나가고 있습니다.
+            </p>
+        </article>
+    </section>
+    <div class = "navigation">
+        <div class = "navigation-seg" style = "background-image: url(seed_photo/excutive.png);"><a href = introduce.html>10기 운영진</a></div>
+        <div class = "navigation-seg" style = "background-image: url(seed_photo/time.png);"><a href = introduce.html>SEED 연혁</a></div>
+        <div class = "navigation-seg" style = "background-image: url(seed_photo/flag.png);"><a href = introduce.html>2021년 목표</a></div>
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

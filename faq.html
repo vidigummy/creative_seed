@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creative SEED</title>
+    <style>
+        @font-face {
+            font-family: Absender;
+            src: url("font/absender1.ttf");
+        }
+        @font-face {
+            font-family: Quantify;
+            src: url("font/Quantify.ttf");
+        }
+        @font-face {
+            font-family: BinggraeMelona;
+            src: url("font/BinggraeMelona.ttf");
+        }
+        @font-face {
+            font-family: BinggraeMelona-Bold;
+            src: url("font/BinggraeMelona-Bold.ttf");
+        }
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+                
+            }
+        }
+    
+
+
+        /* 데스크탑 */
+        @media screen and (min-width: 769px) {
+            .navigation {
+                position: absolute;
+                
+                
+            }
+            .navigation-seg {
+                background-color: rgb(2, 87, 2);
+                background-size: cover;
+                height: 230px;
+                line-height: 230px;
+                width: 230px;
+                text-align: center;
+                font-size: 40px;
+                display: inline-block;
+                border: black solid 1px;
+                border-radius: 50%;
+                padding: 10px;
+                margin: 20px;
+                font-family: BinggraeMelona-Bold;
+                transition: transform 0.2s ease-in-out;
+            }
+            .navigation-seg a{
+                transform: scale(1.1);
+            }
+            .navigation-seg:hover{
+                text-decoration: none;
+                z-index: 2;
+            }
+        }
+        /* 모바일 */
+        @media screen and (max-width: 769px) {
+            .navigation {
+                text-align: end;
+                position: absolute;
+            }
+            .navigation-seg{
+                letter-spacing: 20px;
+                font-size: 60px;
+                padding: 20px;
+                margin-bottom: 10px;
+                font-family: Quantify;
+                transition: color 0.2s ease-in-out;
+            }
+            .navigation-seg a:hover{
+                color : green;
+            }
+        }
+        /* 공통 */
+        body{
+            margin: 0;
+            padding-top: 50px;
+            padding-left: 20px;
+            background-image: url('/seed_photo/dongbang1.jpg');
+            animation: fadein 1.5s;
+        }
+        .top-fixed{
+            color: white;
+            font-family: Absender;
+            position: fixed;
+            height: 45px;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            opacity: 0.7;
+            background-color : rgb(22, 20, 20);
+            z-index: 2;
+        }
+        .top-fixed p{
+            display: inline-block;
+            font-size: 35px;
+            margin-top: 11px;
+
+        }
+        .top-fixed a:link{
+            color: white;
+        }
+        .top-fixed a:visited{
+            color: white;
+        }
+        .top-fixed a:hover{
+            color: green;
+        }
+        a:link{
+           text-decoration: none;
+           color: white;
+        }
+        a:visited{
+           text-decoration: none;
+           color: white;
+        }
+        a:active{
+           text-decoration: none;
+           color: white;
+        }
+        a:hover{
+           text-decoration: none;
+           color: rgb(255, 202, 57);
+        }
+        .introduce{
+            text-align: center;
+        }
+        .introduce-content{
+            font-family: BinggraeMelona;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .welcome{
+            font-family: BinggraeMelona-Bold;
+            font-size: 45px;
+            color: green;
+
+        }
+
+        
+        /* .dropnav {
+            display: inline-block;
+            position: fixed;
+            right: 0;
+        } */
+        .dropdown-content{
+            display: none;
+            text-align: end;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            font-size: 60px;
+            line-height: 70px;
+            top: 77px;
+            right: 0;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropbtn {
+            display: inline;
+            position: fixed;
+            font-size:45px;
+            top: -8px;
+            right: 0;
+            padding: 17px;
+
+            transition: all 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(49, 45, 45);
+        }
+
+        .dropnav:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropnav:hover .dropbtn {
+            transform: rotate(90deg);
+
+        }
+
+        .dropnav a{
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        
+      
+
+        .FAQ{
+            margin-top : 5%; 
+            align-items: center;
+            padding-left: 18.5%;
+            font-family: BinggraeMelona;
+        }
+
+        .QA{
+            margin : 3%;
+            width: 70%;
+            align-self: center;
+            border-style: solid;
+            border-right-color: green;
+            border-bottom-color: green;
+            border-top-color: green;
+            border-bottom-width: 0.25vw;
+            border-right-width: 0vw;
+            border-top-width: 1.5vw;
+            border-left-width: 0vw;
+            border-radius: 4px;
+            box-shadow : 0vw 0vw 0.15vw 0.15vw gray;
+        }
+
+        .Q{
+            font-size : 2vw;
+            font-style: bold;
+            padding: 1.5%;
+            font-family: BinggraeMelona-Bold;
+            border-bottom-style: dotted;
+            border-bottom-color: rgb(231, 236, 240);
+        }
+
+        .A{
+            font-size : 1.7vw;
+            font-style: bold;
+            padding: 1.5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class = "top-fixed">
+        <p>
+            FAQ
+            <a href = seedmain.html>SEED</a>
+        </p>
+        <div class="dropnav">
+            <div class="dropbtn">&#9776;</div> 
+            <div class = "dropdown-content">
+                <a href = apply.html>Apply</a>
+                <a href = ask.html >Ask</a>
+                <a href = promotion.html >Promotion</a>
+                <a href = faq.html>FAQ</a>
+            </div>
+            
+        </div>
+    </header>
+    <section>
+        <article class="introduce" style="margin-top: 6%">
+            <header>
+                <h1 class = "welcome" style="font-size : 3vw">자주 문의가 오는 것들에 대한 답변입니다.</h1>
+            </header>
+            
+        </article>
+        <article class="FAQ">
+            <div class="QA">
+                <div class="Q">Q. SEED는 소프트웨어 학과 동아리라는 소문이 있던데 정말인가<br>&nbsp;&nbsp;&nbsp;요?</div>
+                <div class="A">A.&nbsp;사실이 아니에요. 절대 아니에요.
+                    <br>&nbsp;동아리 특성상 소프트웨어학과 학우들이 많은 것은 맞는데, 기술 창업은 소프트웨어에 국한되지 않기 때문에 예전부터 다양한 학과의 학생들이 함께 해 왔어요.
+                    <br>&nbsp;Application, Web, IT service를 제외하고도 Arduino, Raspberry Pi, Avr, 3D 프린팅 등 여러 분야의 기술을 현실에 적용시키는 노력도 진행중이니까 학부와 관련 없이 지원하셨으면 참 좋을 거 같아요.
+                </div>
+            </div>
+            <div class="QA">
+                <div class="Q">Q. 창업은 무엇을 하는 것이길래 교육이 필요한 건가요? <br>&nbsp;&nbsp;&nbsp;그냥 아이템만 있으면 되는 것 아닌가요?</div>
+                <div class="A">A.&nbsp;저도 그렇게 생각했지만 인생은 실전이에요.
+                    <br>&nbsp;세상에는 여러가지 플랫폼이 존재하며, 기술 개발 이외에도 홍보 채널 확보, 프로토 타입 제품 제작 비용, 법인 설립, 공임비, 제품 양산화 과정 등 지출되는 비용들과 수익구조, 정부 지원금, 유통 채널 등의 판매 및 자금 획득 구조까지 배우지 않는다면 손도 대지 못할 분야들이 산더미입니다. 
+                    <br>&nbsp;물론, 교육이 필요 없던 훌륭하신 분들 또한 많지만 대학생활에서 이러한 지식들을 얻어갈 수 있다면 좋지 않을까 싶습니다!
+                    
+                    
+                </div>
+                </div>
+            <div class="QA">
+                <div class="Q">Q. SEED도 일반 동아리 같이 노는 동아리 아닌가요?</div>
+                <div class="A">A. 아니요. 저희는 노는 것을 지향하는 동아리가 아니여요.
+                    <br>&nbsp;저희는 못 노는 공대 너드 그 자체에요. 낯도 많이 가려요.
+                    <br>&nbsp;열심히 하지 않으면 적응도 못하고 얻어가는 것도 없으실 거에요.
+                    <br>&nbsp;대신 동아리 프로젝트에 열심히 참여하시고 동아리방에 자주 오신다면 친해질 것이라고 장담합니다.
+                    </div>
+            </div>
+            
+            <div class="QA">
+                <div class="Q">Q. 과제 여쭤보면 답 잘 해주시나요?</div>
+                <div class="A">A. 확실하게 교육해드리겠습니다. 그 정도는 여유롭습니다. 1학년들이 많이 착각하는 부분이 있는데, 여러분의 과제는 어렵지 않습니다</div>
+            </div>
+            
+            <div class="QA">
+                <div class="Q">Q. 동아리방은 어떤가요?</div>
+                <div class="A">A. 교내 최고라고 자부해요. 넓고, 안락합니다. 
+                    <br>&nbsp;작업 공간과 휴게 공간이 나뉘어져 있고, 모니터도 구비하여 더블 모니터가 필요하시다면 언제든지 사용 가능해요.
+                    <br>&nbsp;또한, Raspberry Pi, Arduino 들과 센서 모듈들이 여기저기 동아리에 굴러다니니 편하신 대로 사용하고 반납만 해 주시면 됩니다.
+                    <br>&nbsp;바닥에 굴러 다니는건 쓰레기가 아니에요. 그거 다 부품이에요.
+                    <br>&nbsp;항공우주센터 311호에 위치해 있으니 많이 찾아와 주세요!
+                    </div>
+            </div>
+
+            
+        </article>
+
+        </div>
+    </section>
+    
+    
+</body>
+</html>
